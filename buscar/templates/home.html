@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Cachorros</h1>
+    <nav class="menu">Buscar por rasças de cachorros</nav>
+    <form>
+        <input class="inputtag" placeholder="Exemplo: Dorberman" name="buscar">
+        <button>Pesquisar</button>
+    </form>
+    {% for r in terra %}
+    <br>
+    <hr>
+    <div class="css"><b>Nome da raça: </b> {{r.nome_raça}}</div>
+    <div class="css"><b> Tamanho: </b>{{r.tamanho}}</div>
+    <div class="css"><b>Inteligencia:</b>  {{r.inteligencia}}</div>
+    <div class="css"><b> Expectativa de vida: </b>{{r.expectativa_de_vida}}</div>
+    <hr>
+    {% endfor%}
+</body>
+</html>
